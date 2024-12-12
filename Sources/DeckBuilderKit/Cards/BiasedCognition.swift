@@ -25,7 +25,12 @@ BiasedCog = Card(
 
 public let BiasedCognition = Card(name: "Biased Cognition") {
     Gain(4, .focus)
-    At(.startOfPlayerTurn) {
-        Lose(1, .focus)
+
+    Debuff {
+        At(.startOfPlayerTurn) {
+            Debuff {
+                Lose(1, .focus)
+            }
+        }
     }
 }
