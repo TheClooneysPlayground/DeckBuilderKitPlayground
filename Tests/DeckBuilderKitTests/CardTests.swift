@@ -20,6 +20,7 @@ struct CardTests {
 
         #expect(game.player.attributes[.focus]!.intValue == 4)
     }
+
     @Test mutating func biasedCogDecreasesFocusAtStartOfPlayerTurn() async throws {
         game.apply(effect: BiasedCog)
 
