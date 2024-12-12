@@ -8,6 +8,7 @@
 public struct Attribute {
     public enum AttributeType {
         case focus
+        case artifact
     }
 
     public let type: AttributeType
@@ -152,18 +153,3 @@ public struct Card: Effect {
         effect.apply(to: &game)
     }
 }
-
-let biasedCog = """
-BiasedCogEffect = CardEffect {
-  Gain(4, .focus)
-  At(.startOfPlayerTurn) {
-    Lose(1, .focus)
-  }
-}
-BiasedCog = Card(
-  name: "Biased Cognition",
-  energyCost: 1,
-  type: .power,
-  character: .defect
-)
-"""
