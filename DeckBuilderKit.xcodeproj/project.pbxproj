@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		B35903562C84554800A34C2B /* DeckBuilderKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = B35903552C84554800A34C2B /* DeckBuilderKit.docc */; };
 		B359035C2C84554800A34C2B /* DeckBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35903512C84554800A34C2B /* DeckBuilderKit.framework */; };
-		B35903612C84554800A34C2B /* DeckBuilderKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35903602C84554800A34C2B /* DeckBuilderKitTests.swift */; };
 		B35903622C84554800A34C2B /* DeckBuilderKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B35903542C84554800A34C2B /* DeckBuilderKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B359036D2C8455BC00A34C2B /* ResultBuilderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359036C2C8455BC00A34C2B /* ResultBuilderPlayground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +27,6 @@
 		B35903542C84554800A34C2B /* DeckBuilderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckBuilderKit.h; sourceTree = "<group>"; };
 		B35903552C84554800A34C2B /* DeckBuilderKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DeckBuilderKit.docc; sourceTree = "<group>"; };
 		B359035B2C84554800A34C2B /* DeckBuilderKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeckBuilderKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B35903602C84554800A34C2B /* DeckBuilderKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilderKitTests.swift; sourceTree = "<group>"; };
-		B359036C2C8455BC00A34C2B /* ResultBuilderPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderPlayground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +79,6 @@
 		B359035F2C84554800A34C2B /* DeckBuilderKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				B35903602C84554800A34C2B /* DeckBuilderKitTests.swift */,
 			);
 			path = DeckBuilderKitTests;
 			sourceTree = "<group>";
@@ -91,7 +86,6 @@
 		B359036B2C8455A500A34C2B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B359036C2C8455BC00A34C2B /* ResultBuilderPlayground.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -206,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35903562C84554800A34C2B /* DeckBuilderKit.docc in Sources */,
-				B359036D2C8455BC00A34C2B /* ResultBuilderPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +207,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35903612C84554800A34C2B /* DeckBuilderKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +420,6 @@
 		B35903692C84554800A34C2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87YP4F64MU;
@@ -449,7 +440,6 @@
 		B359036A2C84554800A34C2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87YP4F64MU;
