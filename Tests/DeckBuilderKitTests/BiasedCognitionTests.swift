@@ -1,5 +1,5 @@
 //
-//  BiasedCogTests.swift
+//  BiasedCognitionTests.swift
 //  DeckBuilderKitTests
 //
 //  Created by Nicholas Clooney on 12/12/2024.
@@ -16,13 +16,13 @@ struct BiasedCogTests {
     }
 
     @Test mutating func biasedCogIncreasesFocus() async throws {
-        game.apply(effect: BiasedCog)
+        game.apply(effect: BiasedCognition)
 
         #expect(game.player.attributes[.focus]!.intValue == 4)
     }
 
     @Test mutating func biasedCogDecreasesFocusAtStartOfPlayerTurn() async throws {
-        game.apply(effect: BiasedCog)
+        game.apply(effect: BiasedCognition)
 
         try #require(game.player.attributes[.focus]!.intValue == 4)
 
