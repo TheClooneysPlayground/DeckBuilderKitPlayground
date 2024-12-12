@@ -8,7 +8,8 @@
 public struct Game {
     public var player = Player()
 
-    private var effectsByEvent: [GameEvent: [Effect]] = .make()
+    // Interal access control so we can write tests for this.
+    var effectsByEvent: [GameEvent: [Effect]] = .make()
 
     public init() {}
 

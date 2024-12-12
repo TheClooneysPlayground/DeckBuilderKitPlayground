@@ -1,5 +1,5 @@
 //
-//  PlayerAttributesTest.swift
+//  PlayerAttributesTests.swift
 //  DeckBuilderKit
 //
 //  Created by Nicholas Clooney on 12/12/2024.
@@ -8,7 +8,7 @@
 import DeckBuilderKit
 import Testing
 
-struct PlayerAttributesTest {
+struct PlayerAttributesTests {
     @Test func playerShouldHaveAllAttributesSetToZero() async throws {
         let player = Player()
 
