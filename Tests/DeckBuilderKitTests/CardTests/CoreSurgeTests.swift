@@ -6,6 +6,7 @@
 //
 
 import DeckBuilderKit
+import Quick
 import Testing
 
 struct CoreSurgeTests {
@@ -14,8 +15,6 @@ struct CoreSurgeTests {
     init() {
         game = Game()
     }
-
-    // TODO: WE ARE GONNA ADD Quick/Quick
 
     @Test mutating func biasedCogDoesNotApplyDebuffWhenWeHaveArtifact() async throws {
         // game.player.attributes[.artifact]!.value = 1
