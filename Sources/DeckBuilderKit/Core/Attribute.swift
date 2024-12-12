@@ -6,7 +6,7 @@
 //
 
 public struct Attribute {
-    public enum AttributeType {
+    public enum AttributeType: CaseIterable {
         case focus
         case artifact
     }
