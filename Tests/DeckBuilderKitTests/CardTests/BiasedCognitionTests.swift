@@ -6,50 +6,58 @@
 //
 
 import DeckBuilderKit
+import Quick
 import Testing
 
-struct BiasedCogTests {
-    var game: Game
+final class BiasedCognitionSpec: QuickSpec {
+    override class func spec() {
+        var game: Game!
 
-    init() {
-        game = Game()
-    }
+        beforeEach {
+            game = Game()
+        }
 
-    @Test mutating func biasedCogIncreasesFocus() async throws {
-        game.apply(effect: BiasedCognition)
+        context("when bisaed cognition is played") {
+            beforeEach {
+                game.apply(effect: BiasedCognition)
+            }
 
-        #expect(game.player.attributes[.focus]!.intValue == 4)
-    }
+            it("gives us 4 focus") {
+                #expect(game.player.attributes[.focus]!.intValue == 4)
+            }
 
-    @Test mutating func biasedCogDecreasesFocusAtStartOfPlayerTurn() async throws {
-        game.apply(effect: BiasedCognition)
+            context("after the first turn") {
+                beforeEach {
+                    game.dispatch(event: .startOfPlayerTurn)
+                }
 
-        try #require(game.player.attributes[.focus]!.intValue == 4)
+                it("lowers focus by 1") {
+                    #expect(game.player.attributes[.focus]!.intValue == 3)
+                }
+            }
 
-        // First time...
+            context("after the second turn") {
+                beforeEach {
+                    game.dispatch(event: .startOfPlayerTurn)
+                    game.dispatch(event: .startOfPlayerTurn)
+                }
 
-        game.dispatch(event: .startOfPlayerTurn)
+                it("lowers focus by 2") {
+                    #expect(game.player.attributes[.focus]!.intValue == 2)
+                }
+            }
 
-        #expect(game.player.attributes[.focus]!.intValue == 3)
+            context("after 5 turns") {
+                beforeEach {
+                    (0..<5).forEach { _ in
+                        game.dispatch(event: .startOfPlayerTurn)
+                    }
+                }
 
-        // Every time...
-
-        game.dispatch(event: .startOfPlayerTurn)
-
-        #expect(game.player.attributes[.focus]!.intValue == 2)
-
-        game.dispatch(event: .startOfPlayerTurn)
-
-        #expect(game.player.attributes[.focus]!.intValue == 1)
-
-        game.dispatch(event: .startOfPlayerTurn)
-
-        #expect(game.player.attributes[.focus]!.intValue == 0)
-
-        // Oh it goes negative...
-
-        game.dispatch(event: .startOfPlayerTurn)
-
-        #expect(game.player.attributes[.focus]!.intValue == -1)
+                it("has -1 focus") {
+                    #expect(game.player.attributes[.focus]!.intValue == -1)
+                }
+            }
+        }
     }
 }
