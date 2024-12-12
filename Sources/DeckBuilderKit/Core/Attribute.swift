@@ -5,6 +5,7 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
+/// Game Specific
 public struct Attribute {
     public enum AttributeType: CaseIterable {
         case focus

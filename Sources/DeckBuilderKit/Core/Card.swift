@@ -10,6 +10,9 @@
 public struct Card: Effect {
     let name: String
     let effect: Effect
+
+    // Game Specific
+
     // let type: CardType
     // let rarity: Rarity
     // let character: Character

@@ -23,6 +23,13 @@ BiasedCog = Card(
 }
 """
 
+private let bisaedCogV2 = """
+
+BiasedCog = Card(data: GameSpecificCardData()) {
+}
+
+"""
+
 public let BiasedCognition = Card(name: "Biased Cognition") {
     Gain(4, .focus)
 

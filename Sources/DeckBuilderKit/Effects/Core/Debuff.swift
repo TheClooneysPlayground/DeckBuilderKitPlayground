@@ -5,6 +5,8 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
+/// `Debuff`
+/// Quite game specific because it uses game specific attributes.
 struct Debuff: Effect {
     private let nestedEffect: Effect
 
