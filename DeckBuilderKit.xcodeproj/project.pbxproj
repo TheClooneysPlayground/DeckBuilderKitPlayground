@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEAB9B1A2D0A9EDF0048CE61 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB9B192D0A9ED40048CE61 /* Base.swift */; };
+		AEAB9B1C2D0AA3A80048CE61 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB9B1B2D0AA3A80048CE61 /* CardTests.swift */; };
+		AEAB9B1E2D0AA6E20048CE61 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB9B1D2D0AA6E20048CE61 /* Cards.swift */; };
 		B35903562C84554800A34C2B /* DeckBuilderKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = B35903552C84554800A34C2B /* DeckBuilderKit.docc */; };
 		B359035C2C84554800A34C2B /* DeckBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35903512C84554800A34C2B /* DeckBuilderKit.framework */; };
 		B35903622C84554800A34C2B /* DeckBuilderKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B35903542C84554800A34C2B /* DeckBuilderKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEAB9B192D0A9ED40048CE61 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		AEAB9B1B2D0AA3A80048CE61 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		AEAB9B1D2D0AA6E20048CE61 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		B35903512C84554800A34C2B /* DeckBuilderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeckBuilderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35903542C84554800A34C2B /* DeckBuilderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckBuilderKit.h; sourceTree = "<group>"; };
 		B35903552C84554800A34C2B /* DeckBuilderKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DeckBuilderKit.docc; sourceTree = "<group>"; };
@@ -69,9 +75,11 @@
 		B35903532C84554800A34C2B /* DeckBuilderKit */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB9B192D0A9ED40048CE61 /* Base.swift */,
 				B359036B2C8455A500A34C2B /* Sources */,
 				B35903542C84554800A34C2B /* DeckBuilderKit.h */,
 				B35903552C84554800A34C2B /* DeckBuilderKit.docc */,
+				AEAB9B1D2D0AA6E20048CE61 /* Cards.swift */,
 			);
 			path = DeckBuilderKit;
 			sourceTree = "<group>";
@@ -79,6 +87,7 @@
 		B359035F2C84554800A34C2B /* DeckBuilderKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB9B1B2D0AA3A80048CE61 /* CardTests.swift */,
 			);
 			path = DeckBuilderKitTests;
 			sourceTree = "<group>";
@@ -148,13 +157,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					B35903502C84554800A34C2B = {
 						CreatedOnToolsVersion = 15.1;
 					};
 					B359035A2C84554800A34C2B = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -199,7 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAB9B1E2D0AA6E20048CE61 /* Cards.swift in Sources */,
 				B35903562C84554800A34C2B /* DeckBuilderKit.docc in Sources */,
+				AEAB9B1A2D0A9EDF0048CE61 /* Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAB9B1C2D0AA3A80048CE61 /* CardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +269,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -320,6 +334,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -346,6 +361,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -384,6 +400,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -420,8 +437,10 @@
 		B35903692C84554800A34C2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 87YP4F64MU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -432,6 +451,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,8 +460,10 @@
 		B359036A2C84554800A34C2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 87YP4F64MU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
