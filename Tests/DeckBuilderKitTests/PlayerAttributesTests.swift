@@ -6,15 +6,23 @@
 //
 
 import DeckBuilderKit
+import Quick
 import Testing
 
-struct PlayerAttributesTests {
-    @Test func playerShouldHaveAllAttributesSetToZero() async throws {
-        let player = Player()
+final class PlayerAttributesSpec: QuickSpec {
+    override class func spec() {
+        context("when creating a player") {
+            var player: Player!
+            beforeEach {
+                player = Player()
+            }
 
-        for attribute in Attribute.AttributeType.allCases {
-            #expect(player.attributes[attribute] != nil)
-            #expect(player.attributes[attribute]?.value == 0)
+            it("creates an attribute for all attributes, with default value set to 0") {
+                for attribute in Attribute.AttributeType.allCases {
+                    #expect(player.attributes[attribute] != nil)
+                    #expect(player.attributes[attribute]?.value == 0)
+                }
+            }
         }
     }
 }
