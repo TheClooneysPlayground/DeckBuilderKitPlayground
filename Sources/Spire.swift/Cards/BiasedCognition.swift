@@ -32,14 +32,49 @@ BiasedCog = Card(data: GameSpecificCardData()) {
 
 """
 
-public let BiasedCognition = Card(name: "Biased Cognition") {
-    Gain(4, .focus)
+//let effect: Spire.Effect = .lose(1, .focus)
 
-    Debuff {
-        At(.startOfPlayerTurn) {
-            Debuff {
-                Lose(1, .focus)
+let BiasedCognition = Spire.Card(name: "Biased Cognition") {
+    Spire.Effect.gain(4, .focus)
+
+    Spire.Effect.debuff {
+        // TODO: COME BACK AND FIX ME PLS
+//        Spire.Effect.at(GameEvent.startOfPlayerTurn) {
+            Spire.Effect.debuff {
+                Spire.Effect.lose(1, .focus)
             }
-        }
+//        }
     }
 }
+
+private let ThePerfectBiasedCognition =
+"""
+Spire.Card(name: "Biased Cognition") {
+  Gain(4, .focus)
+  Debuff {
+    At(.startOfPlayerTurn) {
+      Debuff {
+        Lose(1, .focus)
+      }
+    }
+  }
+}
+"""
+
+private let TheLessPerfectBiasedCognition =
+"""
+Spire.Card(name: "Biased Cognition") {
+  .gain(4, .focus)
+  .debuff {
+    .at(.startOfPlayerTurn) {
+      .debuff {
+        .lose(1, .focus)
+      }
+    }
+  }
+}
+"""
+
+private let resultBuilder = """
+  
+"""

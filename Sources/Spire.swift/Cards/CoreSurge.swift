@@ -7,8 +7,8 @@
 
 import DeckBuilderKit
 
-public let CoreSurge = Card(name: "Core Surge") {
+let CoreSurge = Spire.Card(name: "Core Surge") {
     // Deal 11 Damage
-    Gain(1, .artifact)
+    Spire.Effect.gain(1, .artifact)
     // Exhaust
 }

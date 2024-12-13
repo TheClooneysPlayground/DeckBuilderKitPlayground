@@ -23,9 +23,5 @@ public extension Game {
 
             effect = effectBuilder()
         }
-
-        public func apply(to game: inout Game) {
-            effect.apply(to: &game)
-        }
     }
 }

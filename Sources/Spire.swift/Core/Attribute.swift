@@ -5,16 +5,18 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
-public struct Attribute {
+import DeckBuilderKit
+
+struct Attribute: AttributeInterface {
     public enum AttributeType: CaseIterable {
         case focus
         case artifact
     }
 
-    public let type: AttributeType
-    public var value: Double
+    let type: AttributeType
+    var value: Double
 
-    public var intValue: Int {
+    var intValue: Int {
         Int(value)
     }
 }

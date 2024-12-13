@@ -7,26 +7,25 @@
 
 import DeckBuilderKit
 
-struct Debuff: Effect {
-    private let nestedEffect: Effect
+extension Spire.Effect {
+    /// `Debuff` is speciliazed to Spire because it requires `Attribute.AttributeType.artifact`
+    static func debuff(@Spire.EffectBuilder _ effectBuilder: () -> Self) -> Self {
+        let effect = effectBuilder()
 
-    init(@EffectBuilder _  effectBuilder: () -> Effect) {
-        self.nestedEffect = effectBuilder()
-    }
+        return Self { game in
+            guard
+                game.player.attributes[.artifact]!.value > 0
+            else {
+                game.apply(effect: effect)
 
-    func apply(to game: inout Game) {
-        guard
-            game.player.attributes[.artifact]!.value > 0
-        else {
-            game.apply(effect: nestedEffect)
+                return
+            }
 
-            return
+            // We do have artifact!
+
+            game.player.attributes[.artifact]!.value -= 1
+
+            // We do not apply the nested negative effect.
         }
-
-        // We do have artifact!
-
-        game.player.attributes[.artifact]!.value -= 1
-
-        // We do not apply the nested negative effect.
     }
 }
