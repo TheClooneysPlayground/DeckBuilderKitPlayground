@@ -21,6 +21,10 @@ public struct Game<
 
     public init() {}
 
+    public mutating func play(card: Card) {
+        card.effect.apply(to: &self)
+    }
+
     public mutating func apply(effect: Effect) {
         effect.apply(to: &self)
     }

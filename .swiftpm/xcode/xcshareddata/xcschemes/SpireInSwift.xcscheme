@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Spire.swift"
-               BuildableName = "Spire.swift"
-               BlueprintName = "Spire.swift"
+               BlueprintIdentifier = "SpireInSwift"
+               BuildableName = "SpireInSwift"
+               BlueprintName = "SpireInSwift"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,7 +30,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlans/Spire.swift.xctestplan"
+            reference = "container:TestPlans/SpireInSwift.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -55,9 +55,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Spire.swift"
-            BuildableName = "Spire.swift"
-            BlueprintName = "Spire.swift"
+            BlueprintIdentifier = "SpireInSwift"
+            BuildableName = "SpireInSwift"
+            BlueprintName = "SpireInSwift"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

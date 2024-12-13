@@ -7,19 +7,20 @@
 
 import DeckBuilderKit
 import Quick
+import SpireInSwift
 import Testing
 
 final class BiasedCognitionSpec: QuickSpec {
     override class func spec() {
-        var game: Game!
+        var game: Spire!
 
         beforeEach {
-            game = Game()
+            game = Spire()
         }
 
         context("when bisaed cognition is played") {
             beforeEach {
-                game.apply(effect: BiasedCognition)
+                game.play(card: BiasedCognition)
             }
 
             it("gives us 4 focus") {

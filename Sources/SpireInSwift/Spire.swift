@@ -7,4 +7,4 @@
 
 import DeckBuilderKit
 
-typealias Spire = Game<Attribute, GameEvent>
+public typealias Spire = Game<Attribute, GameEvent>

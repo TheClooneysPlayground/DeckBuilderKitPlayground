@@ -7,20 +7,21 @@
 
 import DeckBuilderKit
 import Quick
+import SpireInSwift
 import Testing
 
 final class CoreSurgeSpec: QuickSpec {
     override class func spec() {
-        var game: Game!
+        var game: Spire!
 
         beforeEach {
-            game = Game()
+            game = Spire()
         }
 
         context("when core surge is applied after biased cognition") {
             beforeEach {
-                game.apply(effect: BiasedCognition)
-                game.apply(effect: CoreSurge)
+                game.play(card: BiasedCognition)
+                game.play(card: CoreSurge)
             }
 
             context("at the start of the player's turn") {
@@ -48,8 +49,8 @@ final class CoreSurgeSpec: QuickSpec {
         context("when core surge is applied before biased cognition") {
             beforeEach {
                 game = Game()
-                game.apply(effect: CoreSurge)
-                game.apply(effect: BiasedCognition)
+                game.play(card: CoreSurge)
+                game.play(card: BiasedCognition)
             }
 
             context("at the start of the player's turn") {

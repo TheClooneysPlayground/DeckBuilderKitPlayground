@@ -34,7 +34,7 @@ BiasedCog = Card(data: GameSpecificCardData()) {
 
 //let effect: Spire.Effect = .lose(1, .focus)
 
-let BiasedCognition = Spire.Card(name: "Biased Cognition") {
+public let BiasedCognition = Spire.Card(name: "Biased Cognition") {
     Spire.Effect.gain(4, .focus)
 
     Spire.Effect.debuff {

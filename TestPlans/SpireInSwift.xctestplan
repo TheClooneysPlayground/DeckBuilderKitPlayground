@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "1F14743C-7C1E-448A-A5FF-10742C89DE1A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SpireInSwiftTests",
+        "name" : "SpireInSwiftTests"
+      }
+    }
+  ],
+  "version" : 1
+}

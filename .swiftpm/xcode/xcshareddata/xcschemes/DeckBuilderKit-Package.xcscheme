@@ -35,6 +35,20 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SpireInSwift"
+               BuildableName = "SpireInSwift"
+               BlueprintName = "SpireInSwift"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -61,6 +75,16 @@
                BlueprintIdentifier = "Spire.swiftTests"
                BuildableName = "Spire.swiftTests"
                BlueprintName = "Spire.swiftTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SpireInSwiftTests"
+               BuildableName = "SpireInSwiftTests"
+               BlueprintName = "SpireInSwiftTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
