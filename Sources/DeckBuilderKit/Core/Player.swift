@@ -14,6 +14,7 @@ public protocol AttributeInterface {
 }
 
 public extension Game {
+    // Does it have to be defined in the DeckBuilderKit?
     struct Player {
         public var attributes: [Attribute.AttributeType: Attribute] = makeAttributes()
 

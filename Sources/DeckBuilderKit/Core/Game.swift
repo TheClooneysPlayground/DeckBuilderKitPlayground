@@ -5,6 +5,11 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
+// GameController<Game>
+// Game.Player
+// Game.Enemy
+// Game.Map
+
 public struct Game<
     Attribute: AttributeInterface,
     GameEvent: CaseIterable & Hashable

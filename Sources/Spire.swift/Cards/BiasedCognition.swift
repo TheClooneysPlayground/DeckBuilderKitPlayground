@@ -38,12 +38,11 @@ let BiasedCognition = Spire.Card(name: "Biased Cognition") {
     Spire.Effect.gain(4, .focus)
 
     Spire.Effect.debuff {
-        // TODO: COME BACK AND FIX ME PLS
-//        Spire.Effect.at(GameEvent.startOfPlayerTurn) {
+        Spire.Effect.at(.startOfPlayerTurn) {
             Spire.Effect.debuff {
                 Spire.Effect.lose(1, .focus)
             }
-//        }
+        }
     }
 }
 
