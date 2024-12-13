@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9B942CDE-A1F4-4430-BE72-4751F52DD69A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "DeckBuilderKitTests",
+        "name" : "DeckBuilderKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
