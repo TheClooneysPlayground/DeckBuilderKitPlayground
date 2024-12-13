@@ -5,6 +5,8 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
+import DeckBuilderKit
+
 private let biasedCog = """
 BiasedCogEffect = CardEffect {
   Gain(4, .focus)

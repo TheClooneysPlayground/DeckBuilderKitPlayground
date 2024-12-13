@@ -5,26 +5,27 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
-/// NOTE: Does `Card` have to be an `Effect`?
-/// Can we not just have `Game.play(card: card)`?
-public struct Card: Effect {
-    let name: String
-    let effect: Effect
 
-    // Game Specific
+public extension Game {
+    struct Card {
+        let name: String
+        let effect: Effect
 
-    // let type: CardType
-    // let rarity: Rarity
-    // let character: Character
-    // let energyCost: Int
+        // Game Specific
 
-    public init(name: String, @EffectBuilder effectBuilder: () -> Effect) {
-        self.name = name
+        // let type: CardType
+        // let rarity: Rarity
+        // let character: Character
+        // let energyCost: Int
 
-        effect = effectBuilder()
-    }
+        public init(name: String, @EffectBuilder effectBuilder: () -> Effect) {
+            self.name = name
 
-    public func apply(to game: inout Game) {
-        effect.apply(to: &game)
+            effect = effectBuilder()
+        }
+
+        public func apply(to game: inout Game) {
+            effect.apply(to: &game)
+        }
     }
 }

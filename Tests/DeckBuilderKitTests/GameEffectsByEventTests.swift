@@ -13,8 +13,9 @@ final class GameEffectsByEventSpec: QuickSpec {
     override class func spec() {
         context("when creating a game") {
             var game: Game!
+
             beforeEach {
-                game = Game()
+                game = makeGame()
             }
 
             it("creates an empty array of effects for each event") {

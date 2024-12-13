@@ -11,6 +11,10 @@ let package = Package(
             name: "DeckBuilderKit",
             targets: ["DeckBuilderKit"]
         ),
+        .library(
+            name: "Spire.swift",
+            targets: ["Spire.swift"]
+        )
     ],
     dependencies: [
         .package(
@@ -24,9 +28,23 @@ let package = Package(
         .target(
             name: "DeckBuilderKit"
         ),
+        .target(
+            name: "Spire.swift"
+        ),
         .testTarget(
             name: "DeckBuilderKitTests",
-            dependencies: ["DeckBuilderKit", "Quick",]
+            dependencies: [
+                "DeckBuilderKit",
+                "Quick",
+            ]
+        ),
+        .testTarget(
+            name: "Spire.swiftTests",
+            dependencies: [
+                "DeckBuilderKit",
+                "Spire.swift",
+                "Quick",
+            ]
         ),
     ]
 )

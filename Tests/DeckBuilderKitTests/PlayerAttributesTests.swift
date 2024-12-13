@@ -12,9 +12,10 @@ import Testing
 final class PlayerAttributesSpec: QuickSpec {
     override class func spec() {
         context("when creating a player") {
-            var player: Player!
+            var player: Game.Player!
+
             beforeEach {
-                player = Player()
+                player = makeGame().player
             }
 
             it("creates an attribute for all attributes, with default value set to 0") {

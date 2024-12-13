@@ -5,9 +5,12 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
-@resultBuilder
-public enum EffectBuilder {
-    public static func buildBlock(_ components: Effect...) -> Effect {
-        CombinedEffect(effects: components)
+
+public extension Game {
+    @resultBuilder
+    enum EffectBuilder {
+        public static func buildBlock(_ components: Effect...) -> Effect {
+            .combined(effects: components)
+        }
     }
 }

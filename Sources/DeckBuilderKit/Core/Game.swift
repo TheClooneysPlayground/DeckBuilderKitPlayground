@@ -5,11 +5,14 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
-public struct Game {
+public struct Game<
+    Attribute: AttributeInterface,
+    GameEvent: CaseIterable & Hashable
+> {
     public var player = Player()
 
     // Interal access control so we can write tests for this.
-    var effectsByEvent: [GameEvent: [Effect]] = .make()
+    var effectsByEvent: [GameEvent: [Effect]] = makeEffectsByEvent()
 
     public init() {}
 
@@ -28,9 +31,9 @@ public struct Game {
     }
 }
 
-private extension [GameEvent: [Effect]] {
+private extension Game {
     /// Creates an empty array for each `GameEvent` type
-    static func make() -> Self {
+    static func makeEffectsByEvent() -> [GameEvent: [Effect]] {
         var effectsByEvent = [GameEvent: [Effect]]()
 
         for event in GameEvent.allCases {
