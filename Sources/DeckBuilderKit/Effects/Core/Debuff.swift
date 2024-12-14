@@ -7,18 +7,12 @@
 
 /// `Debuff`
 /// Quite game specific because it uses game specific attributes.
-struct Debuff: Effect {
-    private let nestedEffect: Effect
-
-    init(@EffectBuilder _  effectBuilder: () -> Effect) {
-        self.nestedEffect = effectBuilder()
-    }
-
-    func apply(to game: inout Game) {
+func Debuff(@EffectBuilder _  effectBuilder: @escaping () -> Effect) -> Effect {
+    { game in
         guard
             game.player.attributes[.artifact]!.value > 0
         else {
-            game.apply(effect: nestedEffect)
+            game.apply(effect: effectBuilder())
 
             return
         }

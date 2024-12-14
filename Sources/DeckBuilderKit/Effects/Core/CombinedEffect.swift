@@ -5,12 +5,10 @@
 //  Created by Nicholas Clooney on 12/12/2024.
 //
 
-struct CombinedEffect: Effect {
-    let effects: [Effect]
-
-    func apply(to game: inout Game) {
+func CombinedEffect(effects: [Effect]) -> Effect {
+    { game in
         for effect in effects {
-            effect.apply(to: &game)
+            effect(&game)
         }
     }
 }

@@ -14,16 +14,16 @@ public struct Game {
     public init() {}
 
     public mutating func apply(effect: Effect) {
-        effect.apply(to: &self)
+        effect(&self)
     }
 
-    public mutating func register(effect: Effect, for event: GameEvent) {
+    public mutating func register(effect: @escaping Effect, for event: GameEvent) {
         effectsByEvent[event]!.append(effect)
     }
 
     public mutating func dispatch(event: GameEvent) {
         effectsByEvent[event]!.forEach { effect in
-            effect.apply(to: &self)
+            effect(&self)
         }
     }
 }

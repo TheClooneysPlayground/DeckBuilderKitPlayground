@@ -7,7 +7,7 @@
 
 /// NOTE: Does `Card` have to be an `Effect`?
 /// Can we not just have `Game.play(card: card)`?
-public struct Card: Effect {
+public struct Card {
     let name: String
     let effect: Effect
 
@@ -22,9 +22,5 @@ public struct Card: Effect {
         self.name = name
 
         effect = effectBuilder()
-    }
-
-    public func apply(to game: inout Game) {
-        effect.apply(to: &game)
     }
 }
